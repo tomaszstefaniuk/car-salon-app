@@ -3,18 +3,33 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2023,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "plugins": [
+    "react",
     "@typescript-eslint",
     "react-hooks",
-    "import"
+    "jsx-a11y",
+    "import",
+    "prettier"
   ],
   "rules": {
     "react-hooks/exhaustive-deps": "warn",
+    "no-duplicate-imports": "error",
     "newline-before-return": 1,
+    "react/react-in-jsx-scope": "off",
     "import/order": [
       "error",
       {

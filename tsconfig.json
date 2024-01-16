@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "types": [
       "vite/client",
       "jest",
@@ -8,31 +8,32 @@
     ],
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "esnext",
       "DOM",
       "DOM.Iterable"
     ],
-    "module": "ESNext",
+    "allowJs": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src",
+    "incremental": true,
     "paths": {
       "~/*": [
-        "./*"
+        "./src/*"
       ]
-    }
+    },
   },
   "include": [
-    "src/**/*"
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
