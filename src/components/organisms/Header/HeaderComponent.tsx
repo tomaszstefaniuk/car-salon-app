@@ -3,7 +3,6 @@ import {
   AppBar,
   Box,
   Button,
-  Container,
   Divider,
   Drawer,
   IconButton,
@@ -11,50 +10,45 @@ import {
   ListItem,
   ListItemButton,
   Slide,
-  Theme,
   Toolbar,
   Typography,
-  useMediaQuery,
-  useScrollTrigger,
 } from '@mui/material';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import logo from '~/assets/logo.svg';
+import { Container } from '~/components/atoms';
 import { NAV_ITEMS } from '~/constants';
+import { HEADER_HEIGHT } from '~/styles/theme';
 
 type Props = {
-  height: number;
+  scrollTrigger: boolean;
+  isMobile: boolean;
+  isMenuOpen: boolean;
+  toggleIsMenuOpen: () => void;
+  closeMenu: () => void;
 };
 
-export const HeaderComponent: FC<Props> = ({ height }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const trigger = useScrollTrigger();
-  const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down('xl')
-  );
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  const toggleIsMenuOpen = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+export const HeaderComponent: FC<Props> = ({
+  scrollTrigger,
+  isMobile,
+  isMenuOpen,
+  toggleIsMenuOpen,
+  closeMenu,
+}) => {
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Slide appear={false} direction="down" in={!scrollTrigger}>
       <AppBar
         sx={{
-          height,
+          height: HEADER_HEIGHT,
           display: 'flex',
           justifyContent: 'center',
           zIndex: 99999,
         }}
         color="whiteDark"
       >
-        <Container maxWidth="xxl">
+        <Container>
           <Toolbar
             sx={{
+              padding: 0,
               justifyContent: 'space-between',
             }}
           >
@@ -134,7 +128,7 @@ export const HeaderComponent: FC<Props> = ({ height }) => {
               ModalProps={{ keepMounted: true }}
               transitionDuration={700}
             >
-              <Box height="100vh" marginTop={`${height}px`}>
+              <Box height="100vh" marginTop={`${HEADER_HEIGHT}px`}>
                 <List
                   sx={{
                     display: 'flex',

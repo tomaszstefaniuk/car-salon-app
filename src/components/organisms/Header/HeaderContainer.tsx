@@ -1,8 +1,30 @@
-import { FC } from 'react';
+import { Theme, useMediaQuery, useScrollTrigger } from '@mui/material';
+import { FC, useState } from 'react';
 import { HeaderComponent } from './HeaderComponent';
 
-const HEADER_HEIGHT = 84;
-
 export const HeaderContainer: FC = () => {
-  return <HeaderComponent height={HEADER_HEIGHT} />;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollTrigger = useScrollTrigger();
+  const isMobile = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down('xl')
+  );
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const toggleIsMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <HeaderComponent
+      scrollTrigger={scrollTrigger}
+      isMobile={isMobile}
+      isMenuOpen={isMenuOpen}
+      toggleIsMenuOpen={toggleIsMenuOpen}
+      closeMenu={closeMenu}
+    />
+  );
 };
