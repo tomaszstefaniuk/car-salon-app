@@ -29,12 +29,10 @@ export const CarsSectionComponent: FC = () => {
           <Typography variant="h3" color="white" sx={{ opacity: '.5' }}>
             CUPRA Formentor
           </Typography>
-          <Box>
-            <Typography variant="h2" color="white" maxWidth={800}>
-              Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha
-              marki.
-            </Typography>
-          </Box>
+          <Typography variant="h2" color="white" maxWidth={800}>
+            Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha
+            marki.
+          </Typography>
           <Button
             variant="contained"
             color="secondary"
