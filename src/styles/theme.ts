@@ -2,6 +2,8 @@ import { createTheme } from '@mui/material';
 import { hexToRgba } from '~/utils/hexToRgba';
 import './fonts.css';
 
+export const HEADER_HEIGHT = 84;
+
 declare module '@mui/material/styles' {
   interface Palette {
     whiteDark: Palette['primary'];
@@ -45,6 +47,7 @@ const palette = {
   },
   secondary: {
     main: '#DBD3CB',
+    dark: hexToRgba('#DBD3CB', 0.8),
     contrastText: '#000',
   },
 };
@@ -70,6 +73,20 @@ theme = createTheme(theme, {
     body1: {
       lineHeight: '26px',
       fontWeight: 300,
+    },
+    h2: {
+      fontSize: '3.75rem', // 60px
+      lineHeight: '64px',
+      fontWeight: 300,
+      [theme.breakpoints.down('md')]: {
+        fontSize: '2rem', // 32px
+        lineHeight: '40px',
+      },
+    },
+    h3: {
+      fontSize: '1.25rem', // 20px
+      lineHeight: '24px',
+      fontWeight: 400,
     },
   },
   components: {
