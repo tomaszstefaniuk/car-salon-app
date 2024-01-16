@@ -41,6 +41,11 @@ const palette = {
   blackLight: {
     main: '#242221',
   },
+  black: {
+    light: '#242221',
+    main: '#000',
+    dark: '#1B1B1B',
+  },
   primary: {
     main: '#190F14',
     dark: hexToRgba('#190F14', 0.8),
@@ -86,6 +91,11 @@ theme = createTheme(theme, {
     h3: {
       fontSize: '1.25rem', // 20px
       lineHeight: '24px',
+      fontWeight: 400,
+    },
+    caption: {
+      fontSize: '1rem', // 16px
+      lineHeight: '23px',
       fontWeight: 400,
     },
   },
