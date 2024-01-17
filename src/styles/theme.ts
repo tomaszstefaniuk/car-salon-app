@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material';
 import { hexToRgba } from '~/utils/hexToRgba';
 import './fonts.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const HEADER_HEIGHT = 84;
 
@@ -40,6 +42,11 @@ const palette = {
   },
   blackLight: {
     main: '#242221',
+  },
+  white: {
+    light: hexToRgba('#F4F4F3', 0.5),
+    main: '#fff',
+    dark: '#F4F4F3',
   },
   black: {
     light: '#242221',
@@ -97,6 +104,16 @@ theme = createTheme(theme, {
       fontSize: '1rem', // 16px
       lineHeight: '23px',
       fontWeight: 400,
+    },
+    subtitle1: {
+      fontSize: '0.875rem', // 14px
+      lineHeight: '20px',
+      fontWeight: 300,
+    },
+    subtitle2: {
+      fontSize: '1.25rem', // 20px
+      lineHeight: '24px',
+      fontWeight: 500,
     },
   },
   components: {

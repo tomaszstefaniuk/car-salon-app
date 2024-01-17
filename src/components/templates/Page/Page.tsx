@@ -1,24 +1,32 @@
-import { Box } from '@mui/material';
+import { Box, Theme, useMediaQuery } from '@mui/material';
 import { FC } from 'react';
 import {
   CarsSection,
   Footer,
   FormSection,
   Header,
-  OfferSection,
+  ImageCarousel,
+  ImageCarouselMobile,
   SalonsSection,
   TestDriveSection,
 } from '~/components/organisms';
 import { HEADER_HEIGHT } from '~/styles/theme';
 
 export const Page: FC = () => {
+  const isMobile = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down('xl')
+  );
+
   return (
     <Box>
-      <Header />
+      <Header isMobile={isMobile} />
       <Box marginTop={`${HEADER_HEIGHT}px`} />
       <CarsSection />
       <TestDriveSection />
-      <OfferSection />
+      <Box sx={{ backgroundColor: 'white.dark' }}>
+        {isMobile ? <ImageCarouselMobile /> : <ImageCarousel />}
+        {isMobile && <Box sx={{ height: '40px' }} />}
+      </Box>
       <SalonsSection />
       <FormSection />
       <Footer />

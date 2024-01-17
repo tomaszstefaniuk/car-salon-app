@@ -20,7 +20,7 @@ export const TestDriveSectionComponent: FC = () => {
             <Box>
               <Typography
                 variant="h2"
-                color="white"
+                color="white.main"
                 sx={{
                   textDecoration: 'uppercase',
                   marginBottom: 2,
@@ -30,7 +30,7 @@ export const TestDriveSectionComponent: FC = () => {
               </Typography>
               <Typography
                 variant="h3"
-                color="white"
+                color="white.main"
                 maxWidth={560}
                 sx={{ opacity: '.5', marginBottom: 8 }}
               >
@@ -48,7 +48,7 @@ export const TestDriveSectionComponent: FC = () => {
               />
               <Typography
                 variant="caption"
-                color="white"
+                color="white.main"
                 sx={{ opacity: '.5' }}
               >
                 Design inspirowany wyścigami, stworzony z niezwykłą dbałością o
@@ -58,7 +58,7 @@ export const TestDriveSectionComponent: FC = () => {
             <Box sx={{ marginTop: { xs: 0, md: 20 } }}>
               <Typography
                 variant="h2"
-                color="white"
+                color="white.main"
                 sx={{
                   marginTop: { xs: 4, md: 0 },
                   textDecoration: 'uppercase',
@@ -69,7 +69,7 @@ export const TestDriveSectionComponent: FC = () => {
               </Typography>
               <Typography
                 variant="h3"
-                color="white"
+                color="white.main"
                 maxWidth={560}
                 sx={{ opacity: '.5', marginBottom: { xs: 8, md: 0 } }}
               >
@@ -112,7 +112,7 @@ export const TestDriveSectionComponent: FC = () => {
             />
             <Typography
               variant="caption"
-              color="white"
+              color="white.main"
               sx={{ marginLeft: { xs: 2, md: 0 }, opacity: '.5' }}
             >
               Podróżuj z rozmachem bez kompromisów.

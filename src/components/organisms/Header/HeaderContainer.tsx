@@ -1,14 +1,15 @@
-import { Theme, useMediaQuery, useScrollTrigger } from '@mui/material';
+import { useScrollTrigger } from '@mui/material';
 import { FC, useState } from 'react';
 import { HeaderComponent } from './HeaderComponent';
 
-export const HeaderContainer: FC = () => {
+type Props = {
+  isMobile: boolean;
+};
+
+export const HeaderContainer: FC<Props> = ({ isMobile }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollTrigger = useScrollTrigger();
-  const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down('xl')
-  );
 
   const closeMenu = () => {
     setIsMenuOpen(false);
