@@ -6,6 +6,7 @@ import {
   Divider,
   Drawer,
   IconButton,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -78,8 +79,14 @@ export const HeaderComponent: FC<Props> = ({
               {!isMobile && (
                 <Box display="flex" gap="20px" marginLeft={12}>
                   {NAV_ITEMS.map((navItem) => (
-                    <Button key={navItem} color="blackLight" disableRipple>
-                      <Typography>{navItem}</Typography>
+                    <Button
+                      key={navItem.sectionId}
+                      color="blackLight"
+                      disableRipple
+                    >
+                      <Typography>
+                        <Link href={navItem.sectionId}>{navItem.label}</Link>
+                      </Typography>
                     </Button>
                   ))}
                 </Box>
@@ -108,14 +115,16 @@ export const HeaderComponent: FC<Props> = ({
                     minWidth: 'fit-content',
                   }}
                 >
-                  Zapytaj o ofertę
+                  <Link href="#form-section">Zapytaj o ofertę</Link>
                 </Button>
                 <Button
                   variant="contained"
                   color="primary"
                   sx={{ minWidth: 'fit-content' }}
                 >
-                  Umów jazdę próbną
+                  <Link href="#form-section" color="inherit">
+                    Umów jazdę próbną
+                  </Link>
                 </Button>
               </Box>
             )}
@@ -137,7 +146,12 @@ export const HeaderComponent: FC<Props> = ({
                   }}
                 >
                   {NAV_ITEMS.map((navItem) => (
-                    <ListItemButton key={navItem}>{navItem}</ListItemButton>
+                    <ListItemButton
+                      key={navItem.sectionId}
+                      onClick={() => closeMenu()}
+                    >
+                      <Link href={navItem.sectionId}>{navItem.label}</Link>
+                    </ListItemButton>
                   ))}
                   <Divider
                     sx={{ width: '80%', marginTop: 4, marginBottom: 4 }}
@@ -159,13 +173,21 @@ export const HeaderComponent: FC<Props> = ({
                       color="primary"
                       fullWidth
                       sx={{ marginTop: 4, marginBottom: 4 }}
+                      onClick={() => closeMenu()}
                     >
-                      Zapytaj o ofertę
+                      <Link href="#form-section">Zapytaj o ofertę</Link>
                     </Button>
                   </ListItem>
                   <ListItem sx={{ width: '100%', maxWidth: 400 }}>
-                    <Button variant="contained" color="primary" fullWidth>
-                      Umów jazdę próbną
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      fullWidth
+                      onClick={() => closeMenu()}
+                    >
+                      <Link href="#form-section" color="inherit">
+                        Umów jazdę próbną
+                      </Link>
                     </Button>
                   </ListItem>
                 </List>

@@ -137,8 +137,14 @@ theme = createTheme(theme, {
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        html: {
+          scrollBehavior: 'smooth',
+        },
         body: {
           fontFamily: 'Inter',
+        },
+        a: {
+          textDecoration: 'none',
         },
       },
     },
@@ -214,6 +220,13 @@ theme = createTheme(theme, {
         input: {
           paddingTop: 8,
           paddingBottom: 8,
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: 'none',
         },
       },
     },

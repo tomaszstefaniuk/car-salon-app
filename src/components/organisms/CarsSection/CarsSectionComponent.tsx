@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Link } from '@mui/material';
 import { FC } from 'react';
 import carBgImage from '~/assets/images/car-bg.png';
 import { Container } from '~/components/atoms';
@@ -6,6 +6,7 @@ import { Container } from '~/components/atoms';
 export const CarsSectionComponent: FC = () => {
   return (
     <Box
+      id="cars-section"
       component="section"
       sx={{
         width: '100%',
@@ -43,7 +44,7 @@ export const CarsSectionComponent: FC = () => {
               marginTop: { xs: 0, md: 8 },
             }}
           >
-            Ruszaj na jazdę testową
+            <Link href="#form-section">Ruszaj na jazdę testową</Link>
           </Button>
         </Box>
       </Container>

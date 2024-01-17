@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Link,
   SxProps,
   Theme,
   Typography,
@@ -95,7 +96,9 @@ export const TextOverlayImage: FC<Props> = ({
               marginBottom: 6,
             }}
           >
-            {buttonTitle}
+            <Link href="#form-section" color="inherit">
+              {buttonTitle}
+            </Link>
           </Button>
         </Box>
       </Box>

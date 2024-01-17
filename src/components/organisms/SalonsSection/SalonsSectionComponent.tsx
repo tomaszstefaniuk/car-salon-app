@@ -8,7 +8,7 @@ import { TextOverlayImage } from '~/components/molecules';
 
 export const SalonsSectionComponent: FC = () => {
   return (
-    <Box sx={{ backgroundColor: 'black.dark' }}>
+    <Box id="salons-section" sx={{ backgroundColor: 'black.dark' }}>
       <Container>
         <Box height="fit-content">
           <TextOverlayImage

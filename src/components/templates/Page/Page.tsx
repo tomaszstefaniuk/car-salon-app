@@ -23,7 +23,7 @@ export const Page: FC = () => {
       <Box marginTop={`${HEADER_HEIGHT}px`} />
       <CarsSection />
       <TestDriveSection />
-      <Box sx={{ backgroundColor: 'white.dark' }}>
+      <Box id="offer-section" sx={{ backgroundColor: 'white.dark' }}>
         {isMobile ? <ImageCarouselMobile /> : <ImageCarousel />}
         {isMobile && <Box sx={{ height: '40px' }} />}
       </Box>

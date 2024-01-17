@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
 import { FC } from 'react';
 import carTestDrive1Image from '~/assets/images/car-test-drive-1.png';
 import carTestDrive1Image2 from '~/assets/images/car-test-drive-2.png';
@@ -6,7 +6,7 @@ import { Container } from '~/components/atoms';
 
 export const TestDriveSectionComponent: FC = () => {
   return (
-    <Box sx={{ backgroundColor: 'black.dark' }}>
+    <Box sx={{ backgroundColor: 'black.dark' }} id="test-drive-section">
       <Container>
         <Box
           sx={{
@@ -89,7 +89,7 @@ export const TestDriveSectionComponent: FC = () => {
                   display: 'block',
                 }}
               >
-                Umów jazdę próbną
+                <Link href="#form-section">Umów jazdę próbną</Link>
               </Button>
             </Box>
           </Box>
