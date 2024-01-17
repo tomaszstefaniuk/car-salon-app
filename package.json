@@ -16,12 +16,10 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
-    "add": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
-    "yarn": "^1.22.21"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.4",
