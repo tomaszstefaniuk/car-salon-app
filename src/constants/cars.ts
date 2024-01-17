@@ -9,9 +9,9 @@ import leonSmall from '~/assets/images/leon-small.png';
 import leonSportstourerSmall from '~/assets/images/leon-sportstourer-small.png';
 import leonSportstourer from '~/assets/images/leon-sportstourer.png';
 import leon from '~/assets/images/leon.png';
-import { CarouselItem } from '~/types/carouselItem';
+import { CarItem } from '~/types/car';
 
-export const CAROUSEL_ITEMS: CarouselItem[] = [
+export const CARS: CarItem[] = [
   {
     name: 'cupraFormentor',
     title: 'CUPRA Formentor',

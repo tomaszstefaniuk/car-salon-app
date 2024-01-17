@@ -53,6 +53,9 @@ const palette = {
     main: '#000',
     dark: '#1B1B1B',
   },
+  grey: {
+    main: '#D5D5D5',
+  },
   primary: {
     main: '#190F14',
     dark: hexToRgba('#190F14', 0.8),
@@ -108,6 +111,11 @@ theme = createTheme(theme, {
         fontSize: '1.75rem', // 28px
         lineHeight: '36px',
       },
+    },
+    h5: {
+      fontSize: '.8125rem', // 13px
+      lineHeight: '21px',
+      fontWeight: 300,
     },
     caption: {
       fontSize: '1rem', // 16px
@@ -169,6 +177,42 @@ theme = createTheme(theme, {
           '&:hover': {
             backgroundColor: hexToRgba(palette.white.main, 0.8),
           },
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          height: '145px',
+          width: '100%',
+          borderRadius,
+        },
+        icon: {
+          transform: 'scale(1.2, 1.2)',
+          marginRight: 16,
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          width: '100%',
+          maxWidth: 'unset',
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: palette.black.light,
+        },
+      },
+    },
+    MuiInput: {
+      styleOverrides: {
+        input: {
+          paddingTop: 8,
+          paddingBottom: 8,
         },
       },
     },

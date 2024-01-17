@@ -7,10 +7,10 @@ import {
   ChevronRightIcon,
 } from '~/components/atoms';
 import { Slide } from '~/components/molecules';
-import { CarouselItem } from '~/types/carouselItem';
+import { CarItem } from '~/types/car';
 
 type Props = {
-  slides: CarouselItem[];
+  slides: CarItem[];
   slideWidth: number;
 };
 
