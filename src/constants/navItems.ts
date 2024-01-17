@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
-  'Samochody',
-  'Jazda Próbna',
-  'Oferta',
-  'Salony Cupra',
+  { label: 'Samochody', sectionId: '#cars-section' },
+  { label: 'Jazda Próbna', sectionId: '#test-drive-section' },
+  { label: 'Oferta', sectionId: '#offer-section' },
+  { label: 'Salony Cupra', sectionId: '#salons-section' },
 ];

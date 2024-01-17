@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
 import { FC } from 'react';
 import { CarouselSubsection } from '~/components/atoms';
 
@@ -102,7 +102,9 @@ export const Slide: FC<Props> = ({
           marginTop: 6,
         }}
       >
-        {buttonTitle}
+        <Link href="#form-section" color="inherit">
+          {buttonTitle}
+        </Link>
       </Button>
     </Box>
   );

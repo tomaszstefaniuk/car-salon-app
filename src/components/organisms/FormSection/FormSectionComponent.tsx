@@ -30,7 +30,7 @@ export const FormSectionComponent: FC = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: 'white.dark' }}>
+    <Box sx={{ backgroundColor: 'white.dark' }} id="form-section">
       <Container
         maxWidth="sm"
         sx={{
@@ -77,7 +77,7 @@ export const FormSectionComponent: FC = () => {
                   <Typography
                     color="black.light"
                     variant="caption"
-                    sx={{ marginRight: 'auto' }}
+                    sx={{ marginRight: 8 }}
                   >
                     {car.title}
                   </Typography>
