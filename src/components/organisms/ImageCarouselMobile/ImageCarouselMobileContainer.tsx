@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { ImageCarouselMobileComponent } from './ImageCarouselMobileComponent';
-import { CAROUSEL_ITEMS } from '~/constants/carouselItems';
+import { CARS } from '~/constants/cars';
 
 export const ImageCarouselMobileContainer: FC = () => {
-  return <ImageCarouselMobileComponent slides={CAROUSEL_ITEMS} />;
+  return <ImageCarouselMobileComponent slides={CARS} />;
 };

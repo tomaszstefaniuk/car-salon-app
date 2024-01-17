@@ -2,12 +2,12 @@ import { Box } from '@mui/material';
 import { FC } from 'react';
 import Slider from 'react-slick';
 import { Slide } from '~/components/molecules';
-import { CarouselItem } from '~/types/carouselItem';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { CarItem } from '~/types/car';
 
 type Props = {
-  slides: CarouselItem[];
+  slides: CarItem[];
 };
 
 export const ImageCarouselMobileComponent: FC<Props> = ({ slides }) => {

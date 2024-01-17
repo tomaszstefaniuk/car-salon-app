@@ -1,4 +1,4 @@
-export type CarouselItem = {
+export type CarItem = {
   name: string;
   title: string;
   image: string;
