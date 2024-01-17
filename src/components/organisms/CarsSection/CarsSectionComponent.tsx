@@ -26,10 +26,10 @@ export const CarsSectionComponent: FC = () => {
             gap: { xs: 8, md: 2 },
           }}
         >
-          <Typography variant="h3" color="white" sx={{ opacity: '.5' }}>
+          <Typography variant="h3" color="white.main" sx={{ opacity: '.5' }}>
             CUPRA Formentor
           </Typography>
-          <Typography variant="h2" color="white" maxWidth={800}>
+          <Typography variant="h2" color="white.main" maxWidth={800}>
             Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha
             marki.
           </Typography>

@@ -29,6 +29,7 @@ export const Page: FC = () => {
       </Box>
       <SalonsSection />
       <FormSection />
+      <Box sx={{ width: '100%', height: '16px' }} />
       <Footer />
     </Box>
   );
