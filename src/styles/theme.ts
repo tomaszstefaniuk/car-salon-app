@@ -45,7 +45,7 @@ const palette = {
   },
   white: {
     light: hexToRgba('#F4F4F3', 0.5),
-    main: '#fff',
+    main: '#ffffff',
     dark: '#F4F4F3',
   },
   black: {
@@ -100,6 +100,15 @@ theme = createTheme(theme, {
       lineHeight: '24px',
       fontWeight: 400,
     },
+    h4: {
+      fontSize: '2.25rem', // 36px
+      lineHeight: '46px',
+      fontWeight: 300,
+      [theme.breakpoints.down('md')]: {
+        fontSize: '1.75rem', // 28px
+        lineHeight: '36px',
+      },
+    },
     caption: {
       fontSize: '1rem', // 16px
       lineHeight: '23px',
@@ -153,6 +162,12 @@ theme = createTheme(theme, {
           },
           '&:active': {
             opacity: 0.8,
+          },
+        },
+        outlinedPrimary: {
+          backgroundColor: palette.white.main,
+          '&:hover': {
+            backgroundColor: hexToRgba(palette.white.main, 0.8),
           },
         },
       },

@@ -4,7 +4,7 @@ import { FC } from 'react';
 type Props = {
   children: React.ReactNode;
   onClick: () => void;
-  sx: SxProps;
+  sx?: SxProps;
 };
 
 export const CarouselArrowWrapper: FC<Props> = ({ onClick, children, sx }) => {
