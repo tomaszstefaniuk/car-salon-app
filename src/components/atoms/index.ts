@@ -6,3 +6,5 @@ export { CarouselArrowWrapper } from './CarouselArrowWrapper/CarouselArrowWrappe
 export { ChevronDownIcon } from './ChevronDownIcon/ChevronDownIcon';
 export { ChevronUpIcon } from './ChevronUpIcon/ChevronUpIcon';
 export { Checkbox } from './Checkbox/Checkbox';
+export { VimeoIcon } from './VimeoIcon/VimeoIcon';
+export { InstagramIcon } from './InstagramIcon/InstagramIcon';

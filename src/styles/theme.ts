@@ -65,6 +65,7 @@ const palette = {
     dark: hexToRgba('#DBD3CB', 0.8),
     contrastText: '#000',
   },
+  divider: '#DBDBDB',
 };
 
 const borderRadius = '0';
