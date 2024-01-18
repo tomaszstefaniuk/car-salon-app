@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material';
 import { hexToRgba } from '~/utils/hexToRgba';
-import './fonts.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -71,6 +70,9 @@ const palette = {
 const borderRadius = '0';
 
 export let theme = createTheme({
+  typography: {
+    fontFamily: ['Inter', 'sans-serif'].join(','),
+  },
   breakpoints: {
     values: {
       xs: 0,
@@ -140,23 +142,14 @@ theme = createTheme(theme, {
         html: {
           scrollBehavior: 'smooth',
         },
-        body: {
-          fontFamily: 'Inter',
-        },
         a: {
           textDecoration: 'none',
         },
       },
     },
-    MuiTypography: {
-      defaultProps: {
-        fontFamily: 'Inter',
-      },
-    },
     MuiButton: {
       styleOverrides: {
         root: {
-          fontFamily: 'Inter',
           textTransform: 'none',
           borderRadius,
           fontSize: '1rem', // 16px
